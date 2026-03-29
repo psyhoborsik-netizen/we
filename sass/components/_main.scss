@@ -1,0 +1,238 @@
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .hero {
+        height: 1624px;
+        width: 100%;
+        @include flex-center;
+        background-image: url(/we/src/images/heroBeach.webp);
+        @include background_image;
+    }
+
+    .hero__container {
+        width: 100%;
+        height: 1624px;
+        @include flex-column;
+        justify-content: space-evenly;
+        background-color: rgba(10,11,23,0.9);
+
+    }
+
+    .hero__normal {
+        width: 100%;
+        height: 600px;
+        @include flex-center;
+        gap: 150px;
+    }
+    
+    .hero__normal>img {
+        min-width: 630px;
+        max-width: 631px;
+        height: 460px;
+        border-radius: 10px;
+    }
+
+    .hero__normal>div {
+        min-width: 479px;
+        max-width: 480px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    .hero__normal>div>h3 {
+        @include font-h3-big;
+        color: #FFFFFF;
+        margin-bottom: 0;
+    }
+
+    .hero__normal>div>p {
+        @include font-p;
+        color: #E0E0E0;
+        max-width: 360px;
+    }
+
+    .hero__normal>div>button {
+        min-width: 179px;
+        max-width: 180px;
+        height: 59px;
+        border: none;
+        background-color: #DD2242;
+        border-radius: 32px;
+        color: #FFFFFF;
+        @include font-p;
+    }
+
+    .hero__reverse {
+        width: 100%;
+        height: 600px;
+        @include flex-center;
+        flex-direction: row-reverse;
+        gap: 150px;
+    }
+    
+    .hero__reverse>img {
+        min-width: 630px;
+        max-width: 631px;
+        height: 460px;
+        border-radius: 10px;
+    }
+
+    .hero__reverse>div {
+        min-width: 479px;
+        max-width: 480px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-around;
+    }
+
+    .hero__reverse>div>h3 {
+        @include font-h3-big;
+        color: #FFFFFF;
+        margin-bottom: 0;
+    }
+
+    .hero__reverse>div>p {
+        @include font-p;
+        color: #E0E0E0;
+        max-width: 360px;
+    }
+
+    .hero__reverse>div>button {
+        min-width: 179px;
+        max-width: 180px;
+        height: 59px;
+        border: none;
+        background-color: #DD2242;
+        border-radius: 32px;
+        color: #FFFFFF;
+        @include font-p;
+    }
+
+    .secrets {
+        width: 100%;
+        height: 2207px;
+        background-image: url(/we/src/images/secretsBack.webp);
+        @include background_image;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .secrets__container {
+        width: 80%;
+        height: 600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .secrets__info {
+        width: 80%;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .secrets__info>h2 {
+        @include font-h2;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .secrets__img>img {
+        min-width: 404px;
+        max-width: 405px;
+        height: 257px;
+        border-radius: 10px;
+    }
+    
+    .secrets__img {
+        @include flex-center;
+        gap: 30px;
+    }
+
+    .secrets__circle {
+        @include flex-center;
+        gap: 20px;
+    }
+
+    .statistics {
+        width: 100%;
+        height: 800px;
+        @include flex-center;
+        background-image: url(/we/src/images/secretsBack.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        overflow: hidden;
+    }
+
+    .statistics__back {
+        width: 100%;
+        height: 800px;
+        background-color: rgba(10,11,23,0.9);
+        @include flex-center;
+    }
+
+    .statistics__container {
+        width: 70%;
+        height: 600px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .statistics__title {
+        grid-column: 3 span;
+        @include flex-column;
+        min-width: 615px;
+        max-width: 616px;
+        height: 200px;
+        justify-self: center;
+    }
+
+    .statistics__title>h3 {
+        @include font-h3-ultraBig;
+        margin-bottom: 0;
+        color: #FFFFFF;
+    }
+
+    .statistics__title>p {
+        @include font-p;
+        text-align: center;
+        min-width: 413px;
+        max-width: 414px;
+        color: #E0E0E0;
+    }
+
+    .statistics__info {
+        grid-column: 1 span;
+        @include flex-column;
+        min-width: 350px;
+        max-width: 351px;
+        height: 200px;
+        justify-self: center;
+    }
+
+    .statistics__info>h3 {
+        @include font-h3-big;
+        margin-bottom: 0;
+        color: #DD2242;
+    }
+
+    .statistics__info>p {
+        @include font-p;
+        text-align: center;
+        color: #E0E0E0;
+    }
+}

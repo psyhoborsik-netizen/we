@@ -1,0 +1,234 @@
+header {
+    width: 100%;
+    height: 1104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/we/src/images/headerBack.webp);
+    @include background_image;
+    
+
+    .header {
+        width: 100%;
+        height: 80px;
+        @include flex-center;
+    }
+
+    .header__container {
+        width: 90%;
+        height: 79px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .header__left {
+        @include flex-center;
+        gap: 80px;
+    }
+
+    .header__logo {
+        @include flex-center;
+        gap: 10px;
+    }
+
+    .header__logo>h2 {
+        max-width: 100px;
+        @include font-logo;
+    }
+
+    .header__nav {
+        @include flex-center;
+
+    }
+
+    .header__nav>nav>ul {
+        list-style: none;
+        @include flex-center;
+        gap: 30px;
+    }
+
+    .header__nav>nav>ul>li>a {
+        text-decoration: none;
+        @include font-link;
+    }
+
+    .header__search {
+        @include flex-center;
+        width: 10%;
+        
+    }
+
+    .header__search>ul {
+        list-style: none;
+        gap: 20px;
+        @include flex-center; 
+    }
+
+    .explore {
+        height: 1000px;
+        width: 95%;
+        display: flex;
+        align-items: center; 
+    }
+
+    .explore__container {
+        display: grid;
+        height: 990px;
+        width: 100%;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "sidebar main" "sidebar tasks";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .explore__weekend {
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .explore__start {
+        grid-area: main;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+
+    .explore__start h2 {
+        font-family: Roboto;
+        font-weight: 900;
+        font-size: 120px;
+        line-height: 130px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        max-width: 630px;
+        margin-bottom: 40px;
+    }
+
+    .explore__start button {
+        min-width: 270px;
+        max-width: 271px;
+        height: 82px;
+        border-radius: 211px;
+        background-color: #DD2242;
+        border: none;
+        @include font-btn;
+        color: #FFFFFFCC;
+        cursor: pointer;
+    }
+
+    .explore__task {
+        grid-area: tasks;
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        background: rgba(0, 0, 0, 0.4); 
+        backdrop-filter: blur(5px);
+        padding: 40px;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .explore__art-container {
+        display: flex;
+        max-width: 100%;
+        gap: 40px;
+    }
+
+    .explore__art {
+        max-width: 250px;
+        color: white;
+        grid-column: 4;
+    }
+
+    .explore__art>p {
+        color: #DD2242;
+        @include font-p;
+    }
+
+    .explore__art>h3 {
+        @include font-h3;
+    }
+
+    .explore__iframe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        grid-column: 2;
+        background-image: url(/we/src/images/iframe.webp);
+        @include background_image;
+        max-width: 100%;
+    }
+
+    .polygon {
+        position: absolute;
+        color: #000;
+        font-size: 32px;
+    }
+
+    .explore__weekend {
+        height: 150%;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+    }
+
+    .explore__details {
+        width: 100%;
+        height: 50%;
+    }
+
+    .explore__line {
+        min-width: 2px;
+        max-width: 2px;
+        height: 500px;
+        background: linear-gradient(
+          to bottom,
+          #DD2242 30%,
+          rgba(255, 255, 255, 1) 70%
+        );
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: 15px;
+    }
+
+    .explore__details>p {
+        color: #FFFFFF;
+        min-width: 30px;
+        max-width: 31px;
+        margin: 0;
+        transform: rotate(270deg);
+        @include font-weekend;
+    }
+
+    .explore__days {
+        padding: 0;
+        padding-right: 70px;
+    }
+
+    .explore__days>ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+        
+    }
+
+    .explore__days>ul>li>p {
+        @include font-weekend;
+        color: #FFFFFF;
+        transform: rotate(270deg);
+    }
+
+    
+}
